@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rails_sql_views-az-0.0.1/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "rails_sql_views-az-0.0.1"
-  gem.version       = RailsSqlViews::Az::0.0.1::VERSION
+  gem.name          = "rails_sql_views-az"
+  gem.version       = RailsSqlViews::Az::VERSION
   gem.authors       = ["Andrés"]
   gem.email         = ["zamoram.andres@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
