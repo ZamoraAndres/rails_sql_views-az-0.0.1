@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class AdapterTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/adapter_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-test_base_tables">#test_base_tables</a>
+    
+    <li><a href="#method-i-test_columns">#test_columns</a>
+    
+    <li><a href="#method-i-test_current_database">#test_current_database</a>
+    
+    <li><a href="#method-i-test_mapped_columns">#test_mapped_columns</a>
+    
+    <li><a href="#method-i-test_mapped_views">#test_mapped_views</a>
+    
+    <li><a href="#method-i-test_old_name_not_found_error_during_mapping">#test_old_name_not_found_error_during_mapping</a>
+    
+    <li><a href="#method-i-test_supports_views">#test_supports_views</a>
+    
+    <li><a href="#method-i-test_tables">#test_tables</a>
+    
+    <li><a href="#method-i-test_view_select_statement">#test_view_select_statement</a>
+    
+    <li><a href="#method-i-test_views">#test_views</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./TODO.html">TODO</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./RailsSqlViews.html">RailsSqlViews</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters.html">RailsSqlViews::ConnectionAdapters</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/AbstractAdapter.html">RailsSqlViews::ConnectionAdapters::AbstractAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MappingDefinition.html">RailsSqlViews::ConnectionAdapters::MappingDefinition</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/Mysql2Adapter.html">RailsSqlViews::ConnectionAdapters::Mysql2Adapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MysqlAdapter.html">RailsSqlViews::ConnectionAdapters::MysqlAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OciAdapter.html">RailsSqlViews::ConnectionAdapters::OciAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleAdapter.html">RailsSqlViews::ConnectionAdapters::OracleAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleEnhancedAdapter.html">RailsSqlViews::ConnectionAdapters::OracleEnhancedAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/PostgreSQLAdapter.html">RailsSqlViews::ConnectionAdapters::PostgreSQLAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLServerAdapter.html">RailsSqlViews::ConnectionAdapters::SQLServerAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLiteAdapter.html">RailsSqlViews::ConnectionAdapters::SQLiteAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SchemaStatements.html">RailsSqlViews::ConnectionAdapters::SchemaStatements</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/ViewDefinition.html">RailsSqlViews::ConnectionAdapters::ViewDefinition</a>
+  
+    <li><a href="./RailsSqlViews/Loader.html">RailsSqlViews::Loader</a>
+  
+    <li><a href="./RailsSqlViews/SchemaDumper.html">RailsSqlViews::SchemaDumper</a>
+  
+    <li><a href="./Test.html">Test</a>
+  
+    <li><a href="./Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="./Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="./ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="./ActiveRecord/View.html">ActiveRecord::View</a>
+  
+    <li><a href="./AdapterTest.html">AdapterTest</a>
+  
+    <li><a href="./Item.html">Item</a>
+  
+    <li><a href="./Module.html">Module</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./Person2.html">Person2</a>
+  
+    <li><a href="./Place.html">Place</a>
+  
+    <li><a href="./SchemaDumperTest.html">SchemaDumperTest</a>
+  
+    <li><a href="./VPerson.html">VPerson</a>
+  
+    <li><a href="./VProfile.html">VProfile</a>
+  
+    <li><a href="./ViewModelTest.html">ViewModelTest</a>
+  
+    <li><a href="./ViewOperationsTest.html">ViewOperationsTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class AdapterTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-test_base_tables" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_base_tables</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_base_tables-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_base_tables</span>
+  <span class="ruby-identifier">create_view</span>
+  <span class="ruby-identifier">found</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">base_tables</span>.<span class="ruby-identifier">sort</span>
+  <span class="ruby-identifier">found</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Migrator</span>.<span class="ruby-identifier">schema_migrations_table_name</span>)
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&quot;items&quot;</span>, <span class="ruby-string">&quot;items_people&quot;</span>, <span class="ruby-string">&quot;people&quot;</span>, <span class="ruby-string">&quot;people2&quot;</span>, <span class="ruby-string">&quot;places&quot;</span>], <span class="ruby-identifier">found</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_base_tables-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_base_tables-method -->
+
+    
+      <div id="method-i-test_columns" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_columns</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_columns-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_columns</span>
+  <span class="ruby-identifier">create_view</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&quot;f_name&quot;</span>, <span class="ruby-string">&quot;l_name&quot;</span>, <span class="ruby-string">&quot;social_security&quot;</span>], <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">columns</span>(<span class="ruby-string">'v_people'</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_columns-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_columns-method -->
+
+    
+      <div id="method-i-test_current_database" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_current_database</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_current_database-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_current_database</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:current_database</span>)
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">'rails_sql_views_unittest'</span>, <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">current_database</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_current_database-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_current_database-method -->
+
+    
+      <div id="method-i-test_mapped_columns" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_mapped_columns</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_mapped_columns-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_mapped_columns</span>
+  <span class="ruby-identifier">create_mapping</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&quot;f_name&quot;</span>, <span class="ruby-string">&quot;l_name&quot;</span>, <span class="ruby-string">&quot;address_id&quot;</span>], <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">columns</span>(<span class="ruby-string">'v_people'</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_mapped_columns-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_mapped_columns-method -->
+
+    
+      <div id="method-i-test_mapped_views" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_mapped_views</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_mapped_views-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_mapped_views</span>
+  <span class="ruby-identifier">create_mapping</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">'v_people'</span>], <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">views</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_mapped_views-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_mapped_views-method -->
+
+    
+      <div id="method-i-test_old_name_not_found_error_during_mapping" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_old_name_not_found_error_during_mapping</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_old_name_not_found_error_during_mapping-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_old_name_not_found_error_during_mapping</span>
+  <span class="ruby-identifier">assert_raise</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">ActiveRecordError</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_mapping_view</span>(<span class="ruby-value">:people</span>, <span class="ruby-value">:v_people</span>, <span class="ruby-value">:force</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">map_column</span> <span class="ruby-value">:foo</span>, <span class="ruby-value">:bar</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_old_name_not_found_error_during_mapping-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_old_name_not_found_error_during_mapping-method -->
+
+    
+      <div id="method-i-test_supports_views" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_supports_views</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_supports_views-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_supports_views</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">supports_views?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_supports_views-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_supports_views-method -->
+
+    
+      <div id="method-i-test_tables" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_tables</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_tables-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_tables</span>
+  <span class="ruby-identifier">create_view</span>
+  <span class="ruby-identifier">found</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">tables</span>.<span class="ruby-identifier">sort</span>
+  <span class="ruby-identifier">found</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Migrator</span>.<span class="ruby-identifier">schema_migrations_table_name</span>)
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">&quot;items&quot;</span>, <span class="ruby-string">&quot;items_people&quot;</span>, <span class="ruby-string">&quot;people&quot;</span>, <span class="ruby-string">&quot;people2&quot;</span>, <span class="ruby-string">&quot;places&quot;</span>, <span class="ruby-string">&quot;v_people&quot;</span>], <span class="ruby-identifier">found</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_tables-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_tables-method -->
+
+    
+      <div id="method-i-test_view_select_statement" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_view_select_statement</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_view_select_statement-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_view_select_statement</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">adapter_name</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;MySQL&quot;</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;select `people`.`first_name` AS `f_name`,`people`.`last_name` AS `l_name`,`people`.`ssn` AS `social_security` from `people`&quot;</span>, <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">view_select_statement</span>(<span class="ruby-string">'v_people'</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;PostgreSQL&quot;</span>
+    <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&quot;SELECT people.first_name AS f_name, people.last_name AS l_name, people.ssn AS social_security FROM people;&quot;</span>, <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">view_select_statement</span>(<span class="ruby-string">'v_people'</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_view_select_statement-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_view_select_statement-method -->
+
+    
+      <div id="method-i-test_views" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_views</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_views-source">
+            <pre><span class="ruby-comment"># File test/adapter_test.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_views</span>
+  <span class="ruby-identifier">create_view</span>
+  <span class="ruby-identifier">assert_equal</span> [<span class="ruby-string">'v_people'</span>], <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">views</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_views-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_views-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

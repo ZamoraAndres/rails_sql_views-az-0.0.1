@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Rakefile - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./TODO.html">TODO</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./RailsSqlViews.html">RailsSqlViews</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters.html">RailsSqlViews::ConnectionAdapters</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/AbstractAdapter.html">RailsSqlViews::ConnectionAdapters::AbstractAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MappingDefinition.html">RailsSqlViews::ConnectionAdapters::MappingDefinition</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/Mysql2Adapter.html">RailsSqlViews::ConnectionAdapters::Mysql2Adapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MysqlAdapter.html">RailsSqlViews::ConnectionAdapters::MysqlAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OciAdapter.html">RailsSqlViews::ConnectionAdapters::OciAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleAdapter.html">RailsSqlViews::ConnectionAdapters::OracleAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleEnhancedAdapter.html">RailsSqlViews::ConnectionAdapters::OracleEnhancedAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/PostgreSQLAdapter.html">RailsSqlViews::ConnectionAdapters::PostgreSQLAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLServerAdapter.html">RailsSqlViews::ConnectionAdapters::SQLServerAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLiteAdapter.html">RailsSqlViews::ConnectionAdapters::SQLiteAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SchemaStatements.html">RailsSqlViews::ConnectionAdapters::SchemaStatements</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/ViewDefinition.html">RailsSqlViews::ConnectionAdapters::ViewDefinition</a>
+  
+    <li><a href="./RailsSqlViews/Loader.html">RailsSqlViews::Loader</a>
+  
+    <li><a href="./RailsSqlViews/SchemaDumper.html">RailsSqlViews::SchemaDumper</a>
+  
+    <li><a href="./Test.html">Test</a>
+  
+    <li><a href="./Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="./Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="./ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="./ActiveRecord/View.html">ActiveRecord::View</a>
+  
+    <li><a href="./AdapterTest.html">AdapterTest</a>
+  
+    <li><a href="./Item.html">Item</a>
+  
+    <li><a href="./Module.html">Module</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./Person2.html">Person2</a>
+  
+    <li><a href="./Place.html">Place</a>
+  
+    <li><a href="./SchemaDumperTest.html">SchemaDumperTest</a>
+  
+    <li><a href="./VPerson.html">VPerson</a>
+  
+    <li><a href="./VProfile.html">VProfile</a>
+  
+    <li><a href="./ViewModelTest.html">ViewModelTest</a>
+  
+    <li><a href="./ViewOperationsTest.html">ViewOperationsTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>require ‘rake’ require ‘rake/testtask’ require ‘rake/rdoctask’ require
+‘rake/packagetask’ require ‘rake/gempackagetask’</p>
+
+<p>require File.join(File.dirname(__FILE__), ‘lib/rails_sql_views-az’,
+‘version’)</p>
+
+<p>PKG_BUILD       = <a href="http://'PKG_BUILD'">ENV</a> ? ‘.’ + <a
+href="http://'PKG_BUILD'">ENV</a> : ” PKG_NAME        =
+‘rails_sql_views-az’ PKG_VERSION     = RailsSqlViews::VERSION::STRING +
+PKG_BUILD PKG_FILE_NAME   = “#{PKG_NAME}-#{PKG_VERSION}” PKG_DESTINATION =
+<a href="http://"PKG_DESTINATION"">ENV</a> || “../#{PKG_NAME}”</p>
+
+<p>RELEASE_NAME  = “REL #{PKG_VERSION}”</p>
+
+<p>RUBY_FORGE_PROJECT = “activewarehouse” RUBY_FORGE_USER    = “aeden”</p>
+
+<p>desc ‘Default: run unit tests.’ task :default =&gt; :test</p>
+
+<p>desc ‘<a href="Test.html">Test</a> the library.’ Rake::TestTask.new(:test)
+do |t|</p>
+
+<pre>t.libs &lt;&lt; 'lib'
+t.pattern = 'test     _test.rb'
+t.verbose = true</pre>
+
+<p>end</p>
+
+<p>namespace :rcov do</p>
+
+<pre>desc 'Measures test coverage'
+task :test do
+  rm_f 'coverage.data'
+  mkdir 'coverage' unless File.exist?('coverage')
+  rcov = &quot;rcov --aggregate coverage.data --text-summary -Ilib&quot;
+  system(&quot;#{rcov} test/*_test.rb test/   *_test.rb&quot;)
+  system(&quot;open coverage/index.html&quot;) if PLATFORM['darwin']
+end</pre>
+
+<p>end</p>
+
+<p>desc ‘Generate documentation library.’ Rake::RDocTask.new(:rdoc) do |rdoc|</p>
+
+<pre>rdoc.rdoc_dir = 'rdoc'
+rdoc.title    = 'Rails SQL Views'
+rdoc.options &lt;&lt; '--line-numbers' &lt;&lt; '--inline-source'
+rdoc.rdoc_files.include('README')
+rdoc.rdoc_files.include('lib/   *.rb')</pre>
+
+<p>end</p>
+
+<p>begin</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">'jeweler'</span>
+<span class="ruby-constant">Jeweler</span><span class="ruby-operator">::</span><span class="ruby-constant">Tasks</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">name</span> = <span class="ruby-string">&quot;rails_sql_views&quot;</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">summary</span> = <span class="ruby-string">&quot;Library which adds SQL Views to ActiveRecord.&quot;</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">email</span> = <span class="ruby-string">&quot;josh@technicalpickles.com&quot;</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">homepage</span> = <span class="ruby-string">&quot;http://activewarehouse.rubyforge.org/rails_sql_views&quot;</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&quot;Adds support for using SQL views within ActiveRecord&quot;</span>
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">authors</span> = [<span class="ruby-string">&quot;Anthony Eden&quot;</span>]
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span> =  <span class="ruby-constant">FileList</span>[
+    <span class="ruby-string">&quot;CHANGELOG&quot;</span>, 
+    <span class="ruby-string">&quot;README&quot;</span>,
+    <span class="ruby-string">&quot;Rakefile&quot;</span>,
+    <span class="ruby-string">&quot;{bin,lib}/**/*&quot;</span>
+  ]
+  <span class="ruby-identifier">s</span>.<span class="ruby-identifier">add_dependency</span> <span class="ruby-string">'activerecord'</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>rescue LoadError</p>
+
+<pre>puts &quot;Jeweler, or one of its dependencies, is not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com&quot;</pre>
+
+<p>end</p>
+
+<p>desc “Publish the API documentation” task :pdoc =&gt; [:rdoc] do</p>
+
+<pre>Rake::SshDirPublisher.new(&quot;aeden@rubyforge.org&quot;, &quot;/var/www/gforge-projects/activewarehouse/rails_sql_views-az/rdoc&quot;, &quot;rdoc&quot;).upload</pre>
+
+<p>end</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

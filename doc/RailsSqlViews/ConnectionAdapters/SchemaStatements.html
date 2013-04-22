@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module RailsSqlViews::ConnectionAdapters::SchemaStatements - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-included">::included</a>
+    
+    <li><a href="#method-i-create_mapping_view">#create_mapping_view</a>
+    
+    <li><a href="#method-i-create_view">#create_view</a>
+    
+    <li><a href="#method-i-drop_table_with_cascade">#drop_table_with_cascade</a>
+    
+    <li><a href="#method-i-drop_view">#drop_view</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="../../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../TODO.html">TODO</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../RailsSqlViews.html">RailsSqlViews</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters.html">RailsSqlViews::ConnectionAdapters</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/AbstractAdapter.html">RailsSqlViews::ConnectionAdapters::AbstractAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/MappingDefinition.html">RailsSqlViews::ConnectionAdapters::MappingDefinition</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/Mysql2Adapter.html">RailsSqlViews::ConnectionAdapters::Mysql2Adapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/MysqlAdapter.html">RailsSqlViews::ConnectionAdapters::MysqlAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/OciAdapter.html">RailsSqlViews::ConnectionAdapters::OciAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/OracleAdapter.html">RailsSqlViews::ConnectionAdapters::OracleAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/OracleEnhancedAdapter.html">RailsSqlViews::ConnectionAdapters::OracleEnhancedAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/PostgreSQLAdapter.html">RailsSqlViews::ConnectionAdapters::PostgreSQLAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/SQLServerAdapter.html">RailsSqlViews::ConnectionAdapters::SQLServerAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/SQLiteAdapter.html">RailsSqlViews::ConnectionAdapters::SQLiteAdapter</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/SchemaStatements.html">RailsSqlViews::ConnectionAdapters::SchemaStatements</a>
+  
+    <li><a href="../../RailsSqlViews/ConnectionAdapters/ViewDefinition.html">RailsSqlViews::ConnectionAdapters::ViewDefinition</a>
+  
+    <li><a href="../../RailsSqlViews/Loader.html">RailsSqlViews::Loader</a>
+  
+    <li><a href="../../RailsSqlViews/SchemaDumper.html">RailsSqlViews::SchemaDumper</a>
+  
+    <li><a href="../../Test.html">Test</a>
+  
+    <li><a href="../../Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="../../Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="../../ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="../../ActiveRecord/View.html">ActiveRecord::View</a>
+  
+    <li><a href="../../AdapterTest.html">AdapterTest</a>
+  
+    <li><a href="../../Item.html">Item</a>
+  
+    <li><a href="../../Module.html">Module</a>
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../Person.html">Person</a>
+  
+    <li><a href="../../Person2.html">Person2</a>
+  
+    <li><a href="../../Place.html">Place</a>
+  
+    <li><a href="../../SchemaDumperTest.html">SchemaDumperTest</a>
+  
+    <li><a href="../../VPerson.html">VPerson</a>
+  
+    <li><a href="../../VProfile.html">VProfile</a>
+  
+    <li><a href="../../ViewModelTest.html">ViewModelTest</a>
+  
+    <li><a href="../../ViewOperationsTest.html">ViewOperationsTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module RailsSqlViews::ConnectionAdapters::SchemaStatements</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-included" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">included</span><span
+            class="method-args">(base)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="included-source">
+            <pre><span class="ruby-comment"># File lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+  <span class="ruby-identifier">base</span>.<span class="ruby-identifier">alias_method_chain</span> <span class="ruby-value">:drop_table</span>, <span class="ruby-value">:cascade</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- included-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- included-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create_mapping_view" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_mapping_view</span><span
+            class="method-args">(old_name, new_name, options = {}) { |mapper| ... }</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Also creates a view, with the specific purpose of remapping column names to
+make non-<a href="../../ActiveRecord.html">ActiveRecord</a> tables friendly
+with the naming conventions, while maintaining legacy app compatibility.</p>
+          
+
+          
+          <div class="method-source-code" id="create_mapping_view-source">
+            <pre><span class="ruby-comment"># File lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_mapping_view</span>(<span class="ruby-identifier">old_name</span>, <span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">supports_views?</span>
+  
+  <span class="ruby-identifier">col_names</span> = <span class="ruby-identifier">columns</span>(<span class="ruby-identifier">old_name</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">col</span><span class="ruby-operator">|</span> <span class="ruby-identifier">col</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span> }
+  <span class="ruby-identifier">mapper</span> = <span class="ruby-constant">MappingDefinition</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">col_names</span>)
+  
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">mapper</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:force</span>]
+    <span class="ruby-identifier">drop_view</span>(<span class="ruby-identifier">new_name</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">view_sql</span> = <span class="ruby-node">&quot;CREATE VIEW #{new_name} &quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">supports_view_columns_definition?</span>
+    <span class="ruby-identifier">view_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;(#{mapper.view_cols.collect { |c| quote_column_name(c) }.join(', ')}) &quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">view_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;AS SELECT #{mapper.select_cols.collect { |c| quote_column_name(c) }.join(', ')} FROM #{old_name}&quot;</span>
+  <span class="ruby-identifier">execute</span> <span class="ruby-identifier">view_sql</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_mapping_view-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_mapping_view-method -->
+
+    
+      <div id="method-i-create_view" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_view</span><span
+            class="method-args">(name, select_query, options={}) { |view_definition| ... }</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create a view. The <code>options</code> hash can include the following
+keys:</p>
+<dl class="rdoc-list label-list"><dt><code>:check_option</code>
+<dd>
+<p>Specify restrictions for inserts or updates in updatable views. ANSI SQL 92
+defines two check option values: CASCADED and LOCAL. See your database
+documentation for allowed values.</p>
+</dd></dl>
+          
+
+          
+          <div class="method-source-code" id="create_view-source">
+            <pre><span class="ruby-comment"># File lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_view</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">select_query</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">supports_views?</span>
+    <span class="ruby-identifier">view_definition</span> = <span class="ruby-constant">ViewDefinition</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">select_query</span>)
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">view_definition</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:force</span>]
+      <span class="ruby-identifier">drop_view</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">create_sql</span> = <span class="ruby-string">&quot;CREATE VIEW &quot;</span>
+    <span class="ruby-identifier">create_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{quote_table_name(name)} &quot;</span>
+    <span class="ruby-comment">#if supports_view_columns_definition? &amp;&amp; !view_definition.to_sql.blank?</span>
+    <span class="ruby-comment">#  create_sql &lt;&lt; &quot;(&quot;</span>
+    <span class="ruby-comment">#  create_sql &lt;&lt; view_definition.to_sql</span>
+    <span class="ruby-comment">#  create_sql &lt;&lt; &quot;) &quot; </span>
+    <span class="ruby-comment">#end</span>
+    <span class="ruby-identifier">create_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;AS select #{view_definition.select_query}&quot;</span>
+    <span class="ruby-identifier">create_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; WITH #{options[:check_option]} CHECK OPTION&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:check_option</span>]
+    <span class="ruby-identifier">execute</span> <span class="ruby-identifier">create_sql</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create_view-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create_view-method -->
+
+    
+      <div id="method-i-drop_table_with_cascade" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">drop_table_with_cascade</span><span
+            class="method-args">(table_name, options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="drop_table_with_cascade-source">
+            <pre><span class="ruby-comment"># File lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop_table_with_cascade</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">execute</span> <span class="ruby-node">&quot;DROP TABLE #{quote_table_name(table_name)} CASCADE&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- drop_table_with_cascade-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- drop_table_with_cascade-method -->
+
+    
+      <div id="method-i-drop_view" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">drop_view</span><span
+            class="method-args">(name, options={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Drop a view. The <code>options</code> hash can include the following keys:</p>
+<dl class="rdoc-list label-list"><dt><code>:drop_behavior</code>
+<dd>
+<p>Specify the drop behavior. ANSI SQL 92 defines two drop behaviors, CASCADE
+and RESTRICT. See your database documentation to determine what drop
+behaviors are available.</p>
+</dd></dl>
+          
+
+          
+          <div class="method-source-code" id="drop_view-source">
+            <pre><span class="ruby-comment"># File lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop_view</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">supports_views?</span>
+    <span class="ruby-identifier">drop_sql</span> = <span class="ruby-node">&quot;DROP VIEW #{quote_table_name(name)}&quot;</span>
+    <span class="ruby-identifier">drop_sql</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; #{options[:drop_behavior]}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:drop_behavior</span>]
+    <span class="ruby-identifier">execute</span> <span class="ruby-identifier">drop_sql</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- drop_view-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- drop_view-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

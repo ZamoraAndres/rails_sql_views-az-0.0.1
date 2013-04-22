@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class SchemaDumperTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/schema_dumper_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-assert_dump_and_load_succeed">#assert_dump_and_load_succeed</a>
+    
+    <li><a href="#method-i-setup">#setup</a>
+    
+    <li><a href="#method-i-teardown">#teardown</a>
+    
+    <li><a href="#method-i-test_dump_and_load">#test_dump_and_load</a>
+    
+    <li><a href="#method-i-test_logging_error">#test_logging_error</a>
+    
+    <li><a href="#method-i-test_non_allowed_object_raises_error">#test_non_allowed_object_raises_error</a>
+    
+    <li><a href="#method-i-test_regex_ignore">#test_regex_ignore</a>
+    
+    <li><a href="#method-i-test_symbol_ignore">#test_symbol_ignore</a>
+    
+    <li><a href="#method-i-test_union">#test_union</a>
+    
+    <li><a href="#method-i-test_view">#test_view</a>
+    
+    <li><a href="#method-i-test_view_creation_order">#test_view_creation_order</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./TODO.html">TODO</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./RailsSqlViews.html">RailsSqlViews</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters.html">RailsSqlViews::ConnectionAdapters</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/AbstractAdapter.html">RailsSqlViews::ConnectionAdapters::AbstractAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MappingDefinition.html">RailsSqlViews::ConnectionAdapters::MappingDefinition</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/Mysql2Adapter.html">RailsSqlViews::ConnectionAdapters::Mysql2Adapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MysqlAdapter.html">RailsSqlViews::ConnectionAdapters::MysqlAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OciAdapter.html">RailsSqlViews::ConnectionAdapters::OciAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleAdapter.html">RailsSqlViews::ConnectionAdapters::OracleAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleEnhancedAdapter.html">RailsSqlViews::ConnectionAdapters::OracleEnhancedAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/PostgreSQLAdapter.html">RailsSqlViews::ConnectionAdapters::PostgreSQLAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLServerAdapter.html">RailsSqlViews::ConnectionAdapters::SQLServerAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLiteAdapter.html">RailsSqlViews::ConnectionAdapters::SQLiteAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SchemaStatements.html">RailsSqlViews::ConnectionAdapters::SchemaStatements</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/ViewDefinition.html">RailsSqlViews::ConnectionAdapters::ViewDefinition</a>
+  
+    <li><a href="./RailsSqlViews/Loader.html">RailsSqlViews::Loader</a>
+  
+    <li><a href="./RailsSqlViews/SchemaDumper.html">RailsSqlViews::SchemaDumper</a>
+  
+    <li><a href="./Test.html">Test</a>
+  
+    <li><a href="./Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="./Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="./ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="./ActiveRecord/View.html">ActiveRecord::View</a>
+  
+    <li><a href="./AdapterTest.html">AdapterTest</a>
+  
+    <li><a href="./Item.html">Item</a>
+  
+    <li><a href="./Module.html">Module</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./Person2.html">Person2</a>
+  
+    <li><a href="./Place.html">Place</a>
+  
+    <li><a href="./SchemaDumperTest.html">SchemaDumperTest</a>
+  
+    <li><a href="./VPerson.html">VPerson</a>
+  
+    <li><a href="./VProfile.html">VProfile</a>
+  
+    <li><a href="./ViewModelTest.html">ViewModelTest</a>
+  
+    <li><a href="./ViewOperationsTest.html">ViewOperationsTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class SchemaDumperTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-assert_dump_and_load_succeed" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_dump_and_load_succeed</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_dump_and_load_succeed-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+  <span class="ruby-identifier">schema_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/schema.#{$connection}.out.rb&quot;</span>
+  <span class="ruby-identifier">assert_nothing_raised</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">schema_file</span>, <span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">file</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assert_nothing_raised</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">load</span>(<span class="ruby-identifier">schema_file</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- assert_dump_and_load_succeed-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- assert_dump_and_load_succeed-method -->
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-identifier">teardown</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+  [<span class="ruby-string">'V_PEOPLE'</span>, <span class="ruby-string">'V_PROFILE'</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">view</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">adapter_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'OracleEnhanced'</span>
+      <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-node">&quot;
+        DECLARE
+          CURSOR C1 is SELECT view_name FROM user_views where view_name = '#{view}';
+        BEGIN
+          FOR I IN C1 LOOP
+            EXECUTE IMMEDIATE 'DROP VIEW '||I.view_name||'';
+          END LOOP;
+        END;
+      &quot;</span>);
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-node">&quot;drop view if exists #{view}&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- teardown-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- teardown-method -->
+
+    
+      <div id="method-i-test_dump_and_load" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_dump_and_load</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_dump_and_load-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_dump_and_load</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_dump_and_load-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_dump_and_load-method -->
+
+    
+      <div id="method-i-test_logging_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_logging_error</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_logging_error-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_logging_error</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">old_logger</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span>
+  
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">mock_logger</span> = <span class="ruby-identifier">flexmock</span>(<span class="ruby-string">'logger'</span>, <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">mock_logger</span>.<span class="ruby-identifier">should_receive</span>(<span class="ruby-value">:error</span>)
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span> = <span class="ruby-identifier">mock_logger</span>
+    <span class="ruby-identifier">schema_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/schema.#{$connection}.out.rb&quot;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">schema_file</span>, <span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+      <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">file</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span>.<span class="ruby-identifier">pop</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span> = <span class="ruby-identifier">old_logger</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_logging_error-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_logging_error-method -->
+
+    
+      <div id="method-i-test_non_allowed_object_raises_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_non_allowed_object_raises_error</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_non_allowed_object_raises_error-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_non_allowed_object_raises_error</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">schema_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/schema.#{$connection}.out.rb&quot;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">schema_file</span>, <span class="ruby-string">&quot;w&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">StandardError</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">file</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">ensure</span>
+    <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_non_allowed_object_raises_error-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_non_allowed_object_raises_error-method -->
+
+    
+      <div id="method-i-test_regex_ignore" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_regex_ignore</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_regex_ignore-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_regex_ignore</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-regexp">/v_people/</span>)
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_regex_ignore-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_regex_ignore-method -->
+
+    
+      <div id="method-i-test_symbol_ignore" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbol_ignore</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbol_ignore-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbol_ignore</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:v_people</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">ignore_views</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_symbol_ignore-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_symbol_ignore-method -->
+
+    
+      <div id="method-i-test_union" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_union</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_union-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_union</span>
+  <span class="ruby-constant">Person</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Joe'</span>, <span class="ruby-value">:last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:ssn</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'123456789'</span>)
+  <span class="ruby-constant">Person2</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Jane'</span>, <span class="ruby-value">:last_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Doe'</span>, <span class="ruby-value">:ssn</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'222334444'</span>)
+  
+  <span class="ruby-identifier">select_stmt</span> = <span class="ruby-value">&lt;&lt;-HERE
+    select first_name, last_name, ssn from people
+    UNION
+    select first_name, last_name, ssn from people2
+  HERE</span>
+  
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">create_view</span>(<span class="ruby-value">:v_profile</span>, <span class="ruby-identifier">select_stmt</span>, <span class="ruby-value">:force</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">column</span> <span class="ruby-value">:first_name</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">column</span> <span class="ruby-value">:last_name</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">column</span> <span class="ruby-value">:ssn</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_union-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_union-method -->
+
+    
+      <div id="method-i-test_view" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_view</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_view-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_view</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-identifier">stream</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">dumper</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>, <span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">rewind</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;/schema.#{$connection}.expected.rb&quot;</span>, <span class="ruby-string">'r'</span>).<span class="ruby-identifier">readlines</span>, <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">readlines</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_view-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_view-method -->
+
+    
+      <div id="method-i-test_view_creation_order" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_view_creation_order</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_view_creation_order-source">
+            <pre><span class="ruby-comment"># File test/schema_dumper_test.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_view_creation_order</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">view_creation_order</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:v_people</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-identifier">assert_dump_and_load_succeed</span>
+  <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">SchemaDumper</span>.<span class="ruby-identifier">view_creation_order</span>.<span class="ruby-identifier">pop</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_view_creation_order-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_view_creation_order-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

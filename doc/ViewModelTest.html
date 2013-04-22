@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class ViewModelTest - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/view_model_test.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-cleanup">#cleanup</a>
+    
+    <li><a href="#method-i-setup">#setup</a>
+    
+    <li><a href="#method-i-test_access_cloned_belongs_to_association">#test_access_cloned_belongs_to_association</a>
+    
+    <li><a href="#method-i-test_access_cloned_habtm_association">#test_access_cloned_habtm_association</a>
+    
+    <li><a href="#method-i-test_access_cloned_has_many_association">#test_access_cloned_has_many_association</a>
+    
+    <li><a href="#method-i-test_cloned_belongs_to_association_exists">#test_cloned_belongs_to_association_exists</a>
+    
+    <li><a href="#method-i-test_cloned_habtm_association_exists">#test_cloned_habtm_association_exists</a>
+    
+    <li><a href="#method-i-test_cloned_has_many_association_exists">#test_cloned_has_many_association_exists</a>
+    
+    <li><a href="#method-i-test_same_person">#test_same_person</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./CHANGELOG.html">CHANGELOG</a>
+  
+    <li class="file"><a href="./LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./TODO.html">TODO</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./RailsSqlViews.html">RailsSqlViews</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters.html">RailsSqlViews::ConnectionAdapters</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/AbstractAdapter.html">RailsSqlViews::ConnectionAdapters::AbstractAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MappingDefinition.html">RailsSqlViews::ConnectionAdapters::MappingDefinition</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/Mysql2Adapter.html">RailsSqlViews::ConnectionAdapters::Mysql2Adapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/MysqlAdapter.html">RailsSqlViews::ConnectionAdapters::MysqlAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OciAdapter.html">RailsSqlViews::ConnectionAdapters::OciAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleAdapter.html">RailsSqlViews::ConnectionAdapters::OracleAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/OracleEnhancedAdapter.html">RailsSqlViews::ConnectionAdapters::OracleEnhancedAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/PostgreSQLAdapter.html">RailsSqlViews::ConnectionAdapters::PostgreSQLAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLServerAdapter.html">RailsSqlViews::ConnectionAdapters::SQLServerAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SQLiteAdapter.html">RailsSqlViews::ConnectionAdapters::SQLiteAdapter</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/SchemaStatements.html">RailsSqlViews::ConnectionAdapters::SchemaStatements</a>
+  
+    <li><a href="./RailsSqlViews/ConnectionAdapters/ViewDefinition.html">RailsSqlViews::ConnectionAdapters::ViewDefinition</a>
+  
+    <li><a href="./RailsSqlViews/Loader.html">RailsSqlViews::Loader</a>
+  
+    <li><a href="./RailsSqlViews/SchemaDumper.html">RailsSqlViews::SchemaDumper</a>
+  
+    <li><a href="./Test.html">Test</a>
+  
+    <li><a href="./Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="./Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="./ActiveRecord.html">ActiveRecord</a>
+  
+    <li><a href="./ActiveRecord/View.html">ActiveRecord::View</a>
+  
+    <li><a href="./AdapterTest.html">AdapterTest</a>
+  
+    <li><a href="./Item.html">Item</a>
+  
+    <li><a href="./Module.html">Module</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Person.html">Person</a>
+  
+    <li><a href="./Person2.html">Person2</a>
+  
+    <li><a href="./Place.html">Place</a>
+  
+    <li><a href="./SchemaDumperTest.html">SchemaDumperTest</a>
+  
+    <li><a href="./VPerson.html">VPerson</a>
+  
+    <li><a href="./VProfile.html">VProfile</a>
+  
+    <li><a href="./ViewModelTest.html">ViewModelTest</a>
+  
+    <li><a href="./ViewOperationsTest.html">ViewOperationsTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ViewModelTest</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-cleanup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cleanup</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cleanup-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cleanup</span>
+  <span class="ruby-constant">Item</span>.<span class="ruby-identifier">delete_all</span>
+  <span class="ruby-constant">Person</span>.<span class="ruby-identifier">delete_all</span>
+  <span class="ruby-constant">Place</span>.<span class="ruby-identifier">delete_all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cleanup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cleanup-method -->
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-identifier">create_people_view</span>
+  <span class="ruby-constant">VPerson</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:based_on</span>, <span class="ruby-constant">Person</span>)
+  
+  <span class="ruby-ivar">@address</span> = <span class="ruby-constant">Place</span>.<span class="ruby-identifier">create!</span>
+  <span class="ruby-ivar">@person</span> = <span class="ruby-constant">Person</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-value">:first_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Primus'</span>, <span class="ruby-value">:address</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@address</span>)
+  <span class="ruby-ivar">@items</span> = [ <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">owned_items</span>.<span class="ruby-identifier">create!</span>, <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">owned_items</span>.<span class="ruby-identifier">create!</span> ]
+  <span class="ruby-ivar">@sharable_items</span> = [ <span class="ruby-constant">Item</span>.<span class="ruby-identifier">create!</span>, <span class="ruby-constant">Item</span>.<span class="ruby-identifier">create!</span>, <span class="ruby-constant">Item</span>.<span class="ruby-identifier">create!</span> ]
+  <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">shared_items</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@sharable_items</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">shared_items</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@sharable_items</span>[<span class="ruby-value">2</span>]
+
+  <span class="ruby-ivar">@vperson</span> = <span class="ruby-constant">VPerson</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@person</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-test_access_cloned_belongs_to_association" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_access_cloned_belongs_to_association</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_access_cloned_belongs_to_association-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_access_cloned_belongs_to_association</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@address</span>, <span class="ruby-ivar">@vperson</span>.<span class="ruby-identifier">address</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_access_cloned_belongs_to_association-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_access_cloned_belongs_to_association-method -->
+
+    
+      <div id="method-i-test_access_cloned_habtm_association" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_access_cloned_habtm_association</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_access_cloned_habtm_association-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_access_cloned_habtm_association</span>
+  <span class="ruby-identifier">items</span> = <span class="ruby-ivar">@vperson</span>.<span class="ruby-identifier">shared_items</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">expected_items</span> = [ <span class="ruby-ivar">@sharable_items</span>[<span class="ruby-value">0</span>], <span class="ruby-ivar">@sharable_items</span>[<span class="ruby-value">2</span>] ]
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">expected_items</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:id</span>), <span class="ruby-identifier">items</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_access_cloned_habtm_association-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_access_cloned_habtm_association-method -->
+
+    
+      <div id="method-i-test_access_cloned_has_many_association" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_access_cloned_has_many_association</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_access_cloned_has_many_association-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_access_cloned_has_many_association</span>
+  <span class="ruby-identifier">items</span> = <span class="ruby-ivar">@vperson</span>.<span class="ruby-identifier">owned_items</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">items</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@items</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:id</span>), <span class="ruby-identifier">items</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_access_cloned_has_many_association-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_access_cloned_has_many_association-method -->
+
+    
+      <div id="method-i-test_cloned_belongs_to_association_exists" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_cloned_belongs_to_association_exists</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_cloned_belongs_to_association_exists-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_cloned_belongs_to_association_exists</span>
+  <span class="ruby-identifier">reflection</span> = <span class="ruby-constant">VPerson</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-value">:address</span>)
+  <span class="ruby-identifier">assert_not_nil</span> <span class="ruby-identifier">reflection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_cloned_belongs_to_association_exists-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_cloned_belongs_to_association_exists-method -->
+
+    
+      <div id="method-i-test_cloned_habtm_association_exists" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_cloned_habtm_association_exists</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_cloned_habtm_association_exists-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_cloned_habtm_association_exists</span>
+  <span class="ruby-identifier">reflection</span> = <span class="ruby-constant">VPerson</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-value">:shared_items</span>)
+  <span class="ruby-identifier">assert_not_nil</span> <span class="ruby-identifier">reflection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_cloned_habtm_association_exists-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_cloned_habtm_association_exists-method -->
+
+    
+      <div id="method-i-test_cloned_has_many_association_exists" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_cloned_has_many_association_exists</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_cloned_has_many_association_exists-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_cloned_has_many_association_exists</span>
+  <span class="ruby-identifier">reflection</span> = <span class="ruby-constant">VPerson</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-value">:owned_items</span>)
+  <span class="ruby-identifier">assert_not_nil</span> <span class="ruby-identifier">reflection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_cloned_has_many_association_exists-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_cloned_has_many_association_exists-method -->
+
+    
+      <div id="method-i-test_same_person" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_same_person</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_same_person-source">
+            <pre><span class="ruby-comment"># File test/view_model_test.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_same_person</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-ivar">@person</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@vperson</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_same_person-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_same_person-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
